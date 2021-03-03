@@ -1,7 +1,10 @@
-
+#ifndef CFACE_H
+#define CFACE_H
 class CFace
 {
     public:
-        //Aqui van as variables y 
+        CFace();
     protected:
 };
+
+#endif
