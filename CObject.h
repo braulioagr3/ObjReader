@@ -2,6 +2,7 @@
 #define COBJECT
 #include <list>
 #include <string>
+#include <iostream>
 #include "CVertex.h"
 #include "CFace.h"
 using namespace std;
@@ -10,6 +11,7 @@ class CObject
     //Instance variables
     private:
         string name;
+        string id;
         list<CVertex*> vertices;
         list<CFace*> faces;
     protected:
@@ -18,6 +20,7 @@ class CObject
     //Methods
     public:
         CObject(string name);
+        void printData();
     protected:
 };
 

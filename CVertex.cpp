@@ -18,7 +18,3 @@ float CVertex::getZ()
 {
     return this->z;
 }
-list<CEdge*> CVertex::getEdges()
-{
-    return this->edges;
-}
