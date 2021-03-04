@@ -1,6 +1,7 @@
 #include "CVertex.h"
-CVertex::CVertex(float X, float Y, float Z)
+CVertex::CVertex(int id,float X, float Y, float Z)
 {
+    this->id = id;
     this->x = x;
     this->y = y;
     this->z = z;

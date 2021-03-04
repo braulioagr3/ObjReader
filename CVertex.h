@@ -6,13 +6,14 @@ class CVertex
 {
     //Instance variables
     private:
+        int id;
         float x;
         float y;
         float z;
 
     //Methods
     public:
-        CVertex(float X, float Y, float Z);
+        CVertex(int id, float X, float Y, float Z);
         float getX();
         float getY();
         float getZ();
