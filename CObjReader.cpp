@@ -37,7 +37,7 @@ void CObjReader::parseLine(string line)
       case 'o':
         id = line.substr(2,line.length()-2);
         this->object = new CObject(id);
-        this->objects.push_front(this->object);
+        this->objects.push_back(this->object);
       break;
       case 'v':
         line = line.substr(2,line.length()-2);
@@ -45,7 +45,18 @@ void CObjReader::parseLine(string line)
         this->object->addVertex(data);
       break;
       case 'f':
+        line = line.substr(2,line.length()-2);
+        data = CAuxiliarMethods::splitLine(line);
+        this->object->addFace(data);
       break;
     }
+  }
+}
+
+void CObjReader::printData()
+{
+  for(int i = 0 ; i < this->objects.size() ; i++)
+  {
+    this->objects[i]->printData();
   }
 }

@@ -5,9 +5,12 @@ using namespace std;
 
 int main(void)
 {
-  string nombre;
+  string name;
   cout << "Please enter the name of the obj file" << endl;
-  cin >> nombre;
-
+  cin >> name;
+  CObjReader* objectReader;
+  objectReader = new CObjReader(name);
+  objectReader->readFile();
+  objectReader->printData();
   return 0;
 }

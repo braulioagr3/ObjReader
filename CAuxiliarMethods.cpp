@@ -3,11 +3,11 @@
 vector<string> CAuxiliarMethods::splitLine(string line)
 {
     vector<string> coordinates;
-    char* buffer;
+    char buffer[100];
     char* token;
-    char delimiter[] = {' '};
+    char delimiter[] = " ";
     strcpy(buffer,line.c_str());
-    line = strtok(buffer,delimiter);
+    token = strtok(buffer,delimiter);
     if(token != NULL)
     {
         while(token != NULL)

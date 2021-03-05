@@ -1,17 +1,19 @@
 #ifndef CFACE_H
 #define CFACE_H
-#include <list>
+#include <vector>
 #include "CVertex.h"
 using namespace std;
 class CFace
 {
     //Instance Variables
     private:
-        list<CVertex*> vertices;
+        vector<CVertex*> vertices;
     //Methods
     public:
-        CFace(list<CVertex*> vertices);
-        list<CVertex*> getVertices();
+        CFace();
+        vector<CVertex*> getVertices();
+        void addVertex(CVertex* vertex);
+        void printData();
 };
 
 #endif

@@ -1,6 +1,5 @@
 #ifndef CObJREADER_H
 #define CObJREADER_H
-#include <list>
 #include <string>
 #include <vector>
 #include <fstream>
@@ -14,12 +13,13 @@ class CObjReader
         string name;
         string id;
         CObject* object;
-        list<CObject*> objects;
+        vector<CObject*> objects;
     //Methods
     public:
         CObjReader(string name);
         void readFile();
         void parseLine(string line);
+        void printData();
 };
 
 #endif
