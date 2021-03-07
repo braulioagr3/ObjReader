@@ -1,11 +1,14 @@
 #include "CObject.h"
-int i = 0;
 CObject::CObject(string id)
 { 
     this->id = id;
     this->idVertex = 0;
 }
-
+CObject::CObject(string id, int idVertex)
+{ 
+    this->id = id;
+    this->idVertex = idVertex;
+}
 void CObject::addVertex(vector<string> data)
 {
   this->idVertex++;
@@ -35,7 +38,6 @@ void CObject::addFace(vector<string> data)
 
 void CObject::printData()
 {
-  cout << "-----------------------------------------------------------" << endl;
   cout << "Name of object: " + this->id << endl;
   cout << "Number of vertices: " + to_string(this->vertices.size()) << endl;
   cout << "Number of faces: " + to_string(this->faces.size()) << endl;
@@ -47,6 +49,7 @@ void CObject::printData()
   {
     this->faces[j]->printData();
   }
+  cout << "-----------------------------------------------------------" << endl;
 }
 
 CVertex* CObject::searchVertex(string id)
@@ -54,7 +57,7 @@ CVertex* CObject::searchVertex(string id)
   CVertex* vertex;
   for(int i=0 ; i < this->vertices.size() ; i++)
   {
-    if(strcmp(id.c_str(), to_string(this->vertices[i]->getID()).c_str()) == 0)
+    if(atoi(id.c_str()) == this->vertices[i]->getID())
     {
       vertex = this->vertices[i];
       break;

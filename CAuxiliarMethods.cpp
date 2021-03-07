@@ -1,3 +1,4 @@
+ 
 #include "CAuxiliarMethods.h"
 
 vector<string> CAuxiliarMethods::splitLine(string line)

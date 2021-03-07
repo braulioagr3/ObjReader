@@ -20,8 +20,8 @@ void CFace::printData()
     face = "Face: (";
     for(int i = 0 ; i < this->vertices.size() ; i++)
     {
-        face += "," + to_string(this->vertices[i]->getID());
+        face += " " + to_string(this->vertices[i]->getID());
     }
-    cout << face +")"<< endl;
+    cout << face +" )"<< endl;
 
 }

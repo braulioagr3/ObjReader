@@ -4,6 +4,7 @@
 #include <vector>
 #include <cstring>
 #include <iostream>
+#include <stdlib.h>
 #include "CVertex.h"
 #include "CFace.h"
 using namespace std;
@@ -20,6 +21,7 @@ class CObject
     //Methods
     public:
         CObject(string id);
+        CObject(string id,int idVertex);
         void printData();
         vector<CVertex*> getVertices();
         void addVertex(vector<string> data);

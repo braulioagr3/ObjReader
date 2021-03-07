@@ -36,8 +36,16 @@ void CObjReader::parseLine(string line)
     {
       case 'o':
         id = line.substr(2,line.length()-2);
-        this->object = new CObject(id);
-        this->objects.push_back(this->object);
+        if(this->objects.size() == 0)
+        {
+          this->object = new CObject(id);
+          this->objects.push_back(this->object);
+        }
+        else
+        {
+          this->object = new CObject(id,this->object->getVertices().size());
+          this->objects.push_back(this->object);
+        }
       break;
       case 'v':
         line = line.substr(2,line.length()-2);
