@@ -4,11 +4,13 @@ CObject::CObject(string id)
     this->id = id;
     this->idVertex = 0;
 }
+
 CObject::CObject(string id, int idVertex)
 { 
     this->id = id;
     this->idVertex = idVertex;
 }
+
 void CObject::addVertex(vector<string> data)
 {
   this->idVertex++;

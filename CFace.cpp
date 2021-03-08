@@ -23,5 +23,4 @@ void CFace::printData()
         face += " " + to_string(this->vertices[i]->getID());
     }
     cout << face +" )"<< endl;
-
 }
