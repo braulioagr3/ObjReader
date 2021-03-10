@@ -23,10 +23,11 @@ class CObject
         CObject(string id);
         CObject(string id,int idVertex);
         void printData();
-        vector<CVertex*> getVertices();
-        void addVertex(vector<string> data);
         void addFace(vector<string> data);
+        void addVertex(vector<string> data);
         CVertex* searchVertex(string id);
+        vector<CVertex*> getVertices();
+        vector<CFace*> getFaces();
 };
 
 #endif

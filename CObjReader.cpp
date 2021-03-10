@@ -68,3 +68,13 @@ void CObjReader::printData()
     this->objects[i]->printData();
   }
 }
+
+string CObjReader::getName()
+{
+  return this->name;
+}
+
+vector<CObject*> CObjReader::getObjects()
+{
+  return this->objects;
+}

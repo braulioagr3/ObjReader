@@ -20,6 +20,8 @@ class CObjReader
         void readFile();
         void parseLine(string line);
         void printData();
+        string getName();
+        vector<CObject*> getObjects();
 };
 
 #endif

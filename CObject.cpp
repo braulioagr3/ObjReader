@@ -23,6 +23,11 @@ vector<CVertex*> CObject::getVertices()
   return this->vertices;
 }
 
+vector<CFace*> CObject::getFaces()
+{
+  return this->faces;
+}
+
 void CObject::addFace(vector<string> data)
 {
   CFace* face;
